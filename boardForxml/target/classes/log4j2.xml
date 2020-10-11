@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration packages="org.jiji">
+	<Appenders>
+		<!-- Appenders -->
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d %-5p [%t] (%C{2}:%L) - %m%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<!-- Application Loggers -->
+		<Logger name="org.jiji" level="info">
+		</Logger>
+
+		<!-- 3rdparty Loggers -->
+		<Logger name="org.springframework.core" level="info">
+		</Logger>
+
+		<Logger name="org.springframework.beans" level="info">
+		</Logger>
+
+		<Logger name="org.springframework.context" level="info">
+		</Logger>
+
+		<Logger name="org.springframework.web" level="info">
+		</Logger>
+
+		<Logger name="jdbc.sqltiming" additivity="false" level="error">
+			<AppenderRef ref="console" />
+		</Logger>
+		<Logger name="jdbc.connection" additivity="false" level="error">
+			<AppenderRef ref="console" />
+		</Logger>
+
+		<Logger name="jdbc.resultset" additivity="false" level="error">
+			<AppenderRef ref="console" />
+		</Logger>
+
+		<Logger name="jdbc.audit" additivity="false" level="error">
+			<AppenderRef ref="console" />
+		</Logger>
+
+		<Logger name="jdbc.sqlonly" additivity="false" level="info">
+			<AppenderRef ref="console" />
+		</Logger>
+
+
+		<Logger name="jdbc.resultsettable" additivity="false"
+			level="info">
+			<AppenderRef ref="console" />
+		</Logger>
+
+		<!-- Root Logger -->
+		<Root level="warn">
+			<appender-ref ref="console" />
+		</Root>
+	</Loggers>
+</Configuration>
